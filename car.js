@@ -1,10 +1,10 @@
 
-function Car () {
+function Car(src, code, x, y) {
 	this.img = new Image();   // Create new img element
 	this.img.onload = function(){
 	  // execute drawImage statements here
 	};
-	this.img.src = 'car.png'; // Set source path
+	this.img.src = src; // Set source path
 
 	// collision
 	this.collisions = {
@@ -13,6 +13,9 @@ function Car () {
 		bottom: new CollisionPoint(this, 180),
 		left: new CollisionPoint(this, 270, 10)
 	};
+	this.code = code;
+	this.x = x;
+	this.y = y;
 }
 Car.prototype = {
 	x: 870,
@@ -23,7 +26,7 @@ Car.prototype = {
 	rotation: 350,
 	speed: 0,
 	speedDecay: 0.98,
-	maxSpeed: 4,
+	maxSpeed: 3.3,
 	onGrass: false,
 	backSpeed: 1.1,
 

@@ -1,0 +1,24 @@
+.gameTitle {
+    font-family: cursive;
+    font-style: italic;
+    background: url('http://dummyimage.com/20x2/000/000') repeat-x left 0.72em;
+    font-size: xx-large;
+
+}
+
+del {
+    text-decoration: none;
+    position: relative;
+}
+del:after {
+    content: ' ';
+    font-size: inherit;
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 40%;
+    bottom: 40%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
